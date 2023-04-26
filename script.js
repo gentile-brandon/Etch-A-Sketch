@@ -3,11 +3,12 @@ const grid = document.querySelector(".container");
 /**
  * Create 16 by 16 grid
  */
-function createDivs(num) {
-  const total = num * num;
+function createDivs() {
+  const input = prompt("Select a grid size 1 to 99");
+  const total = input * input;
   const container = document.querySelector(".container");
-  container.style.gridTemplateColumns = `repeat(${num}, 1fr)`;
-  container.style.gridTemplateRows = `repeat(${num}, 1fr)`;
+  container.style.gridTemplateColumns = `repeat(${input}, 1fr)`;
+  container.style.gridTemplateRows = `repeat(${input}, 1fr)`;
   for (i = 0; i < total; i++) {
     const div = document.createElement("div");
     div.classList.add("square");
